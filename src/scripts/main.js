@@ -363,9 +363,10 @@ function addPeopleTable(humans) {
     const table = document.createElement('tr');
     const age = person.died - person.born;
     const century = Math.ceil(person.died / 100);
+    const gender = person.sex === 'm' ? 'Male' : 'Female';
     const rowsPeople = [
       person.name,
-      person.sex,
+      gender,
       person.born,
       person.died,
       age,
